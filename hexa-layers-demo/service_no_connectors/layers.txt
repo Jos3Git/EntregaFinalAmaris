@@ -1,0 +1,77 @@
+
+CONNECTORS OPCIONALES:	
+	* connectors opcionales, tanto IN como OUT
+	* puede tener sentido, si en el mapeo no hay ninguna logica
+
+* sin IN
+	-> inbounds-domain mapping se hace en controller
+	-> uso de VO en controllers :(( se podria mandar VOs por endpoints REST
+	
+* sin OUT
+	-> domain-outbounds mapping se hace en: 
+		(a) outbounds -> VO en repos :(( ..  
+		(b) domain -> Entities en domain :(( 
+		En ambos se pierde loose coupling
+
+
+=================
+
+Sin IN:
+
+inbounds [DTO, VO]
+	controllers  
+		--> mapper (DTO -- VO)
+		--> domain (VO)
+
+domain [VO]
+	services 
+		--> outconnector (VO)
+
+outconnectors [VO, Entity]
+	adaptors 
+		--> mappers (VO -- Entity)
+		--> outbounds (Entity)
+
+outbounds [Entity]
+	repos (Entity)
+
+
+=================
+
+Sin OUT:
+
+inbounds [DTO]
+	controllers  --> connectors(DTO)
+
+connectors [DTO, VO]
+	connectors
+		--> mappers (DTO -- VO) 
+		--> domain (VO)
+
+domain [VO]
+	services 
+		--> outbounds (VO)
+
+outbounds [VO, Entity]
+	mappers (VO -- Entity) 
+	repos (Entity)
+	
+=================
+
+Ni IN ni OUT:
+
+inbounds [DTO, VO]
+	controllers 
+		--> mappers (DTO -- VO) 
+		--> domain (VO)
+
+domain [VO]
+	services 
+		--> outbounds (VO)
+
+outbounds [VO, Entity]
+	mappers (VO -- Entity) 
+	repos (Entity)
+
+=================
+

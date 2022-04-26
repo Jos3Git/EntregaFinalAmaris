@@ -1,0 +1,3 @@
+org\example\hexa\outbounds\mongo\entities\OrderEntity$OrderEntityBuilder.class
+org\example\hexa\outbounds\mongo\repos\MongoOrderRepo.class
+org\example\hexa\outbounds\mongo\entities\OrderEntity.class

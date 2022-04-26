@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="greyhawk-rest-clients" />
+        <module name="greyhawk-rest-server-utils" />
+        <module name="greyhawk-rest-server-conventions-api" />
+        <module name="greyhawk-rest-server-conventions-testutils" />
+        <module name="greyhawk-rest-server-openapi3-starter" />
+        <module name="greyhawk-rest-server-testutils" />
+        <module name="greyhawk-rest-server-starter" />
+        <module name="greyhawk-rest-server-openapi2-starter" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

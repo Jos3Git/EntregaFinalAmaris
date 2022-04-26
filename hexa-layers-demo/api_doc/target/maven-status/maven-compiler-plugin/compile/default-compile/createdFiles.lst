@@ -1,0 +1,5 @@
+org\example\hexa\inbounds\rest\orders\dtos\OrderRequestDto$OrderRequestDtoBuilder.class
+org\example\hexa\inbounds\rest\orders\dtos\OrderResponseDto$OrderResponseDtoBuilder.class
+org\example\hexa\inbounds\rest\orders\OrdersCommandApi.class
+org\example\hexa\inbounds\rest\orders\dtos\OrderResponseDto.class
+org\example\hexa\inbounds\rest\orders\dtos\OrderRequestDto.class

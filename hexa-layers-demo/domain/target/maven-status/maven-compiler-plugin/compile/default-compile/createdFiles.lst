@@ -1,0 +1,3 @@
+org\example\hexa\domain\orders\vos\Order$OrderBuilder.class
+org\example\hexa\domain\orders\vos\Order.class
+org\example\hexa\domain\orders\services\OrderService.class

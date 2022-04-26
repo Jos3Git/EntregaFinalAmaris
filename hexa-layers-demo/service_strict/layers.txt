@@ -1,0 +1,27 @@
+
+STRICT:
+	* cada capa usa solo sus objetos
+	* connectors mapean entre capas
+	* onbounds-domain mapping strict
+	* domain-outbounds mapping strict
+	
+inbounds [DTO]
+	controllers  --> connectors(DTO)
+
+connectors  [DTO, VO]
+	connectors
+		--> mappers (DTO -- VO) 
+		--> domain (VO)
+
+domain  [VO]
+	services 
+		--> outconnector (VO)
+
+outconnectors [VO, Entity]
+	adaptors 
+		--> mappers (VO -- Entity)
+		--> outbounds (Entity)
+
+outbounds [Entity]
+	repos (Entity)
+

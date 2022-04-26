@@ -1,0 +1,6 @@
+C:\Users\ZAMBRANO.J\Documents\AMARIS2\hexa-layers-demo\service_no_in_connector\src\main\java\org\example\hexa\inbounds\rest\orders\mappers\OrderDtoMapper.java
+C:\Users\ZAMBRANO.J\Documents\AMARIS2\hexa-layers-demo\service_no_in_connector\src\main\java\org\example\hexa\outboundsconnectors\mongo\adaptors\MongoOrderRepoConnectorComp.java
+C:\Users\ZAMBRANO.J\Documents\AMARIS2\hexa-layers-demo\service_no_in_connector\src\main\java\org\example\hexa\outboundsconnectors\mongo\mappers\OrderEntityMapper.java
+C:\Users\ZAMBRANO.J\Documents\AMARIS2\hexa-layers-demo\service_no_in_connector\src\main\java\org\example\hexa\domain\orders\services\OrderServiceComp.java
+C:\Users\ZAMBRANO.J\Documents\AMARIS2\hexa-layers-demo\service_no_in_connector\src\main\java\org\example\hexa\inbounds\rest\orders\OrdersCommandController.java
+C:\Users\ZAMBRANO.J\Documents\AMARIS2\hexa-layers-demo\service_no_in_connector\src\main\java\org\example\hexa\outboundsconnectors\mongo\adaptors\MongoOrderRepoConnector.java

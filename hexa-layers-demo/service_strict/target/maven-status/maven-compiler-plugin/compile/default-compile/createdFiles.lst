@@ -1,0 +1,8 @@
+org\example\hexa\outboundsconnectors\mongo\adaptors\MongoOrderRepoConnector.class
+org\example\hexa\outboundsconnectors\mongo\mappers\OrderEntityMapper.class
+org\example\hexa\domain\orders\services\OrderServiceComp.class
+org\example\hexa\outboundsconnectors\mongo\adaptors\MongoOrderRepoConnectorComp.class
+org\example\hexa\inboundsconnectors\rest\orders\mappers\OrderDtoMapper.class
+org\example\hexa\inboundsconnectors\rest\orders\adaptors\OrderServiceAdaptor.class
+org\example\hexa\inbounds\rest\orders\OrdersCommandController.class
+org\example\hexa\inboundsconnectors\rest\orders\adaptors\OrderServiceAdaptorComp.class

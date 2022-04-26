@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.greyhawk.rest.server.conventions</groupId>
+	<artifactId>greyhawk-rest-server-conventions-testutils</artifactId>
+
+	<parent>
+		<groupId>org.greyhawk.rest</groupId>
+		<artifactId>greyhawk-rest-parent</artifactId>
+		<version>0.1.1-SNAPSHOT</version>
+		<relativePath>../../rest-parent/</relativePath>
+	</parent>
+
+	<properties>
+		<greyhawk.spring-boot-plugin.skip>true</greyhawk.spring-boot-plugin.skip>
+		<greyhawk.package.root>org.greyhawk.rest.server.conventions.testutils</greyhawk.package.root>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.greyhawk.rest.server</groupId>
+			<artifactId>greyhawk-rest-server-testutils</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.greyhawk.rest.server.conventions</groupId>
+			<artifactId>greyhawk-rest-server-conventions-api</artifactId>
+		</dependency>
+
+	</dependencies>
+
+</project>

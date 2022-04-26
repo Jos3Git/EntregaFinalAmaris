@@ -1,0 +1,39 @@
+
+# Maven
+/target/
+.mvn
+/bin/
+*.versionsBackup
+.flattened-pom.xml
+
+# STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.metadata
+.springBeans
+.sts4-cache
+
+# IntelliJ
+.idea
+*.iws
+*.iml
+*.ipr
+
+# NetBeans
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VSCode
+.vscode
+
+# Others
+true
+.DS_Store
+

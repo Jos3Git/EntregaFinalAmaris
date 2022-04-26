@@ -1,0 +1,207 @@
+[
+  {
+    "_class": "com.example.outbounds.model.entities.BrandEntity",
+    "id": "1",
+    "name": "ZARA"
+  },
+  {
+    "_id": "35455",
+    "createAt": {
+      "$date": {
+        "$numberLong": "1602317410000"
+      }
+    },
+    "updateAt": {
+      "$date": {
+        "$numberLong": "1602317410000"
+      }
+    },
+    "name": "itemExample",
+    "category": {
+      "$numberLong": "1"
+    },
+    "endOfSalesDate": {
+      "$date": {
+        "$numberLong": "1602317410000"
+      }
+    },
+    "_class": "com.example.outbounds.model.entities.ProductEntity"
+  },
+  {
+    "_id": "1",
+    "startdate": {
+      "$date": {
+        "$numberLong": "1592085600000"
+      }
+    },
+    "enddate": {
+      "$date": {
+        "$numberLong": "1609455599000"
+      }
+    },
+    "pricelist": 1,
+    "priority": 0,
+    "price": 150.02,
+    "curr": "EUR",
+    "brand": {
+      "_id": "1",
+      "name": "Zara"
+    },
+    "product": {
+      "_id": "35455",
+      "createAt": {
+        "$date": {
+          "$numberLong": "1602317410000"
+        }
+      },
+      "updateAt": {
+        "$date": {
+          "$numberLong": "1602317410000"
+        }
+      },
+      "name": "itemExample",
+      "category": {
+        "$numberLong": "1"
+      },
+      "endOfSalesDate": {
+        "$date": {
+          "$numberLong": "1602317410000"
+        }
+      }
+    },
+    "_class": "com.example.outbounds.model.entities.PriceEntity"
+  },
+  {
+    "_id": "2",
+    "startdate": {
+      "$date": {
+        "$numberLong": "1592139600000"
+      }
+    },
+    "enddate": {
+      "$date": {
+        "$numberLong": "1592152200000"
+      }
+    },
+    "pricelist": 2,
+    "priority": 1,
+    "price": 25.45,
+    "curr": "EUR",
+    "brand": {
+      "_id": "1",
+      "name": "Zara"
+    },
+    "product": {
+      "_id": "35455",
+      "createAt": {
+        "$date": {
+          "$numberLong": "1602317410000"
+        }
+      },
+      "updateAt": {
+        "$date": {
+          "$numberLong": "1602317410000"
+        }
+      },
+      "name": "itemExample",
+      "category": {
+        "$numberLong": "1"
+      },
+      "endOfSalesDate": {
+        "$date": {
+          "$numberLong": "1602317410000"
+        }
+      }
+    },
+    "_class": "com.example.outbounds.model.entities.PriceEntity"
+  },
+  {
+    "_id": "3",
+    "startdate": {
+      "$date": {
+        "$numberLong": "1592172000000"
+      }
+    },
+    "enddate": {
+      "$date": {
+        "$numberLong": "1592211600000"
+      }
+    },
+    "pricelist": 3,
+    "priority": 1,
+    "price": 30.5,
+    "curr": "EUR",
+    "brand": {
+      "_id": "1",
+      "name": "Zara"
+    },
+    "product": {
+      "_id": "35455",
+      "createAt": {
+        "$date": {
+          "$numberLong": "1602317410000"
+        }
+      },
+      "updateAt": {
+        "$date": {
+          "$numberLong": "1602317410000"
+        }
+      },
+      "name": "itemExample",
+      "category": {
+        "$numberLong": "1"
+      },
+      "endOfSalesDate": {
+        "$date": {
+          "$numberLong": "1602317410000"
+        }
+      }
+    },
+    "_class": "com.example.outbounds.model.entities.PriceEntity"
+  },
+  {
+    "_id": "4",
+    "startdate": {
+      "$date": {
+        "$numberLong": "1592229600000"
+      }
+    },
+    "enddate": {
+      "$date": {
+        "$numberLong": "1609455599000"
+      }
+    },
+    "pricelist": 4,
+    "priority": 1,
+    "price": 38.95,
+    "curr": "EUR",
+    "brand": {
+      "_id": "1",
+      "name": "Zara"
+    },
+    "product": {
+      "_id": "35455",
+      "createAt": {
+        "$date": {
+          "$numberLong": "1602317410000"
+        }
+      },
+      "updateAt": {
+        "$date": {
+          "$numberLong": "1602317410000"
+        }
+      },
+      "name": "itemExample",
+      "category": {
+        "$numberLong": "1"
+      },
+      "endOfSalesDate": {
+        "$date": {
+          "$numberLong": "1602317410000"
+        }
+      }
+    },
+    "_class": "com.example.outbounds.model.entities.PriceEntity"
+  }
+
+]

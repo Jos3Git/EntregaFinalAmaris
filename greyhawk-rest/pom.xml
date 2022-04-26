@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.greyhawk.rest</groupId>
+	<artifactId>greyhawk-rest-aggregator</artifactId>
+	<version>0.1.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+
+	<properties>
+		<greyhawk.rest-version>0.1.1-SNAPSHOT</greyhawk.rest-version>
+	</properties>
+
+	<modules>
+		<module>rest-bom</module>
+		<module>rest-parent</module>
+		<module>server</module>
+		<module>server-conventions</module>
+		<module>clients</module>
+	</modules>
+
+</project>
