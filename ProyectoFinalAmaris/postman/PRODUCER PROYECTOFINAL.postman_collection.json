@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "d57742c7-429f-4a32-84ea-8b4238d609cd",
+		"name": "PRODUCER PROYECTOFINAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create topic",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    productid:35455,\r\n    pricelistid:1,\r\n    price:150.02\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/producer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"producer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
