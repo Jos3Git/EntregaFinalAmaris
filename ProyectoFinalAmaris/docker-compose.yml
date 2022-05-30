@@ -32,6 +32,19 @@ services:
             KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
             CONFLUENT_SUPPORT_CUSTOMER_ID: 'anonymous'
 
+    kafdrop:
+        image: obsidiandynamics/kafdrop
+        hostname: kafdrop
+        container_name: kafdrop
+        restart: "no"
+        depends_on:
+            - broker
+        ports:
+            - "9000:9000"
+        environment:
+            KAFKA_BROKERCONNECT: "broker:29092"
+            JVM_OPTS: "-Xms16M -Xmx48M -Xss180K -XX:-TieredCompilation -XX:+UseStringDeduplication -noverify"
+
 #    control-center:
 #        image: confluentinc/cp-enterprise-control-center:7.0.1
 #        hostname: control-center
