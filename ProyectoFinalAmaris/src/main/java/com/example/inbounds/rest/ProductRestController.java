@@ -5,6 +5,7 @@ import com.example.commons.constans.Constants;
 import com.example.commons.dtos.ProductDTO;
 import com.example.inbounds.ports.ProductInPort;
 import lombok.AllArgsConstructor;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,10 +48,14 @@ public class ProductRestController {
     if (product == null || product.getId() != null) {
       return ResponseEntity.badRequest().build();
     }
+    try{
+      ProductDTO productRespDTO = productDomainToDTOMapper.mapResponse(productInPort.create(product));
 
-    ProductDTO productRespDTO = productDomainToDTOMapper.mapResponse(productInPort.create(product));
+      return ResponseEntity.ok(productRespDTO);
 
-    return ResponseEntity.ok(productRespDTO);
+    } catch (IllegalArgumentException  e){
+      return ResponseEntity.notFound().build();
+    }
   }
 
   @PutMapping
@@ -58,9 +63,14 @@ public class ProductRestController {
     if (product == null || product.getId() == null) {
       return ResponseEntity.badRequest().build();
     }
-    ProductDTO productRespDTO = productDomainToDTOMapper.mapResponse(productInPort.update(product));
+    try{
+      ProductDTO productRespDTO = productDomainToDTOMapper.mapResponse(productInPort.update(product));
 
-    return ResponseEntity.ok(productRespDTO);
+      return ResponseEntity.ok(productRespDTO);
+
+    } catch (IllegalArgumentException  e){
+      return ResponseEntity.notFound().build();
+    }
   }
 
   @DeleteMapping("/id/{id}")

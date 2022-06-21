@@ -1,13 +1,11 @@
 package com.example.domain.services;
 
-import com.example.commons.constans.Constants;
 import com.example.commons.dtos.ProductDTO;
 import com.example.domain.vos.Product;
 import com.example.inbounds.mappers.ProductDomainToDTOMapper;
 import com.example.outbounds.ports.ProductCrudProducerOutPort;
 import com.example.outbounds.ports.ProductDAOOutPort;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -21,7 +19,7 @@ import java.util.List;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-class ProductUserCaseTest {
+class ProductUseCaseTest {
 
   @Mock
   private ProductDAOOutPort productDAOOutPort;
@@ -30,7 +28,7 @@ class ProductUserCaseTest {
   @Mock
   private ProductDomainToDTOMapper productDomainToDTOMapper;
   @InjectMocks
-  ProductUserCase productUserCase;
+  ProductUseCase productUseCase;
 
   @Test
   void findAll() {
@@ -43,7 +41,7 @@ class ProductUserCaseTest {
 
     doNothing().when(productCrudProducerOutPort).generateTiles(Mockito.any());
 
-    List<Product> response = productUserCase.findAll();
+    List<Product> response = productUseCase.findAll();
 
     verify(productCrudProducerOutPort).generateTiles(Mockito.any());
     verify(productDAOOutPort).findAll();
@@ -60,7 +58,7 @@ class ProductUserCaseTest {
 
     doNothing().when(productCrudProducerOutPort).generateTiles(Mockito.any());
 
-    Product response = productUserCase.findById("1");
+    Product response = productUseCase.findById("1");
 
     verify(productCrudProducerOutPort).generateTiles(Mockito.any());
     verify(productDAOOutPort).findById(Mockito.any());
@@ -80,7 +78,7 @@ class ProductUserCaseTest {
 
     doNothing().when(productCrudProducerOutPort).generateTiles(Mockito.any());
 
-    Product response = productUserCase
+    Product response = productUseCase
         .create(new ProductDTO(null, LocalDateTime.now(), LocalDateTime.now(), "aaa", 1l, LocalDateTime.now(), null));
 
     verify(productCrudProducerOutPort).generateTiles(Mockito.any());
@@ -91,7 +89,7 @@ class ProductUserCaseTest {
   @Test
   void createNotNullId() {
 
-    Product response = productUserCase
+    Product response = productUseCase
         .create(new ProductDTO("1", LocalDateTime.now(), LocalDateTime.now(), "aaa", 1l, LocalDateTime.now(), null));
 
     Assertions.assertNull(response);
@@ -110,7 +108,7 @@ class ProductUserCaseTest {
 
     doNothing().when(productCrudProducerOutPort).generateTiles(Mockito.any());
 
-    Product response = productUserCase
+    Product response = productUseCase
         .update(new ProductDTO("1", LocalDateTime.now(), LocalDateTime.now(), "aaa", 1l, LocalDateTime.now(), null));
 
     verify(productCrudProducerOutPort).generateTiles(Mockito.any());
@@ -121,7 +119,7 @@ class ProductUserCaseTest {
   @Test
   void updateNullId() {
 
-    Product response = productUserCase
+    Product response = productUseCase
         .update(new ProductDTO(null, LocalDateTime.now(), LocalDateTime.now(), "aaa", 1l, LocalDateTime.now(), null));
 
     Assertions.assertNull(response);
@@ -133,7 +131,7 @@ class ProductUserCaseTest {
 
     doNothing().when(productCrudProducerOutPort).generateTiles(Mockito.any());
 
-    productUserCase.delete(Mockito.any());
+    productUseCase.delete(Mockito.any());
 
     verify(productCrudProducerOutPort).generateTiles(Mockito.any());
     verify(productDAOOutPort).deleteById(Mockito.any());
