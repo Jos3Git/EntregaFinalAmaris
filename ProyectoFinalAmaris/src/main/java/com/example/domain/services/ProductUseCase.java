@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 @Component
 @AllArgsConstructor
-public class ProductUserCase implements ProductInPort {
+public class ProductUseCase implements ProductInPort {
 
   private ProductDAOOutPort productDAOOutPort;
 

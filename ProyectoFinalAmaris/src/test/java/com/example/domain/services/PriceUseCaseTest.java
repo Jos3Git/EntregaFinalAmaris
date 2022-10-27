@@ -24,7 +24,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class PriceUserCaseTest {
+class PriceUseCaseTest {
 
   @Mock
   private PriceDAOOutPort priceDAOOutPort;
@@ -32,7 +32,7 @@ class PriceUserCaseTest {
   private PriceDomainToDTOMapper priceDomainToDTOMapper;
 
   @InjectMocks
-  PriceUserCase priceUserCase;
+  PriceUseCase priceUseCase;
 
   @Test
   void findAll() {
@@ -43,7 +43,7 @@ class PriceUserCaseTest {
     when(priceDomainToDTOMapper.mapRequest(Mockito.any()))
         .thenReturn(new Price("1", LocalDateTime.now(), LocalDateTime.now(), 1, 1, 20D, "EUR", new Brand(), new Product()));
 
-    List<Price> response = priceUserCase.findAll();
+    List<Price> response = priceUseCase.findAll();
 
     verify(priceDAOOutPort).findAll();
     Assertions.assertNotNull(response);
@@ -61,7 +61,7 @@ class PriceUserCaseTest {
     when(priceDomainToDTOMapper.mapRequest(Mockito.any()))
         .thenReturn(new Price("1", LocalDateTime.now(), LocalDateTime.now(), 1, 1, 20D, "EUR", new Brand(), new Product()));
 
-    Price response = priceUserCase.findByProductIdAndPriceListAndUpdate("1", 1, 100D);
+    Price response = priceUseCase.findByProductIdAndPriceListAndUpdate("1", 1, 100D);
 
     verify(priceDAOOutPort).update(Mockito.any());
     verify(priceDAOOutPort).findByProductIdAndPricelist(Mockito.any(), Mockito.any());
@@ -73,7 +73,7 @@ class PriceUserCaseTest {
 
     when(priceDAOOutPort.findByProductIdAndPricelist(Mockito.any(), Mockito.any())).thenReturn(null);
 
-    Assertions.assertThrows(EntityNotFoundException.class, () -> priceUserCase.findByProductIdAndPriceListAndUpdate("1", 1, 100D));
+    Assertions.assertThrows(EntityNotFoundException.class, () -> priceUseCase.findByProductIdAndPriceListAndUpdate("1", 1, 100D));
 
   }
 
@@ -86,7 +86,7 @@ class PriceUserCaseTest {
     when(priceDomainToDTOMapper.mapRequest(Mockito.any()))
         .thenReturn(new Price("1", LocalDateTime.now(), LocalDateTime.now(), 1, 1, 20D, "EUR", new Brand(), new Product()));
 
-    List<Price> response = priceUserCase.findAllByProductIdAndBrandIdAndDateAplication("1", "1", LocalDateTime.now());
+    List<Price> response = priceUseCase.findAllByProductIdAndBrandIdAndDateAplication("1", "1", LocalDateTime.now());
 
     verify(priceDAOOutPort).findAllByProductIdAndBrandIdAndDateAplication(Mockito.any(), Mockito.any(), Mockito.any());
     Assertions.assertNotNull(response);

@@ -32,7 +32,8 @@ public class PriceDAO implements PriceDAOOutPort {
 //        .findAllByProductIdAndBrandIdAndEnddateBeforeAndStartdateAfter(idProduct, idBrand, dateAplication, dateAplication).stream()
 //        .map(price -> priceEntityToDTOMapper.mapResponse(price)).collect(Collectors.toList());
     return priceEntityRepository.findAllByProductIdAndBrandId(idProduct, idBrand).stream()
-        .filter(price -> price.getStartdate().isBefore(dateAplication)).filter(price -> price.getEnddate().isAfter(dateAplication))
+            .filter(price -> price.getStartdate().isBefore(dateAplication))
+            .filter(price -> price.getEnddate().isAfter(dateAplication))
         .map(price -> priceEntityToDTOMapper.mapResponse(price)).collect(Collectors.toList());
   }
 
