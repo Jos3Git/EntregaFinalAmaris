@@ -1,1 +1,10 @@
 /.idea/
+/hexa-layers-demo/service_no_in_connector/target/
+/hexa-layers-demo/service_no_connectors/target/
+/hexa-layers-demo/domain/target/
+/hexa-layers-demo/repo/target/
+/hexa-layers-demo/service_no_connectors/target/
+/hexa-layers-demo/service_no_in_connector/target/
+/hexa-layers-demo/service_no_in_connector/target/
+/hexa-layers-demo/service_strict/target/
+/hexa-layers-demo/service_strict/target/
