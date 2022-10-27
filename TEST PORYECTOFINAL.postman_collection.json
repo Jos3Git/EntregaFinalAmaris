@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "f422db84-204d-4216-a3dd-08b802a60a17",
+		"name": "TEST PORYECTOFINAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "products findall",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "products findbyid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/id/35455",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"id",
+						"35455"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "products create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"createAt\": \"2022-04-13T00:00:00\",\r\n        \"updateAt\": \"2022-04-13T00:00:00\",\r\n        \"name\": \"producto1 postman with kafka\",\r\n        \"category\": 0,\r\n        \"endOfSalesDate\": \"2023-04-13T00:00:00\",\r\n        \"prices\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "products update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 35457,\r\n        \"createAt\": \"2022-04-13T00:00:00\",\r\n        \"updateAt\": \"2022-04-13T00:00:00\",\r\n        \"name\": \"producto1 postman mod with kafka\",\r\n        \"category\": 0,\r\n        \"endOfSalesDate\": \"2023-04-13T00:00:00\",\r\n        \"prices\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "products delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/id/35458",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"id",
+						"35458"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test 1: petición a las 10:00 del día 14 del producto 35455   para la brand 1 (ZARA)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices/by/idProduct/35455/idBrand/1/dateAplication/2020-06-14T14:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices",
+						"by",
+						"idProduct",
+						"35455",
+						"idBrand",
+						"1",
+						"dateAplication",
+						"2020-06-14T14:00:00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test 2: petición a las 16:00 del día 14 del producto 35455   para la brand 1 (ZARA) Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices/by/idProduct/35455/idBrand/1/dateAplication/2020-06-14T16:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices",
+						"by",
+						"idProduct",
+						"35455",
+						"idBrand",
+						"1",
+						"dateAplication",
+						"2020-06-14T16:00:00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test 3: petición a las 21:00 del día 14 del producto 35455   para la brand 1 (ZARA) Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices/by/idProduct/35455/idBrand/1/dateAplication/2020-06-14T21:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices",
+						"by",
+						"idProduct",
+						"35455",
+						"idBrand",
+						"1",
+						"dateAplication",
+						"2020-06-14T21:00:00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test 4: petición a las 10:00 del día 15 del producto 35455   para la brand 1 (ZARA) Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices/by/idProduct/35455/idBrand/1/dateAplication/2020-06-15T10:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices",
+						"by",
+						"idProduct",
+						"35455",
+						"idBrand",
+						"1",
+						"dateAplication",
+						"2020-06-15T10:00:00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test 5: petición a las 21:00 del día 16 del producto 35455   para la brand 1 (ZARA) Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices/by/idProduct/35455/idBrand/1/dateAplication/2020-06-16T21:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices",
+						"by",
+						"idProduct",
+						"35455",
+						"idBrand",
+						"1",
+						"dateAplication",
+						"2020-06-16T21:00:00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prices findall",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
